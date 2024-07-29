@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(33, 33, 92);
+    margin: 0;
+}
+
+h1{
+    background-color: darkgoldenrod;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+}
+.nav-inicio{
+    margin: 10px;
+}
+.listanav{
+    background-color: darkgoldenrod;
+    border-radius: 5px;
+    list-style-type: none;
+}
+.linknav{
+    color: white;
+}
+
+h3{
+    background-color: darkgoldenrod;
+    margin: 10px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.listaproductos{
+    background-color: darkgoldenrod;
+    margin: 10px;
+    border-radius: 5px;
+}
+.productos{
+    background-color: darkgoldenrod;
+    color: white;
+    padding: 2px;
+    font-size: 22px;
+}
+p{
+    color: white;
+    background-color: black;
+    text-align: center;
+}
