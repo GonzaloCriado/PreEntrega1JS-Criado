@@ -1,10 +1,26 @@
+// Definición de la clase Producto
+class Producto {
+    constructor(id, nombre, marca, precio) {
+        this.id = id;
+        this.nombre = nombre;
+        this.marca = marca;
+        this.precio = precio;
+    }
+
+    // Método para mostrar la información del producto
+    mostrarInfo() {
+        return `${this.nombre} (${this.marca}) - $${this.precio}`;
+    }
+}
+
+// Creación de objetos de la clase Producto
 const productos = [
-    { id: "Cerveza", nombre: 'Cerveza', precio: 2000 },
-    { id: "Vino", nombre: 'Vino', precio: 1500 },
-    { id: "Vodka", nombre: 'Vodka', precio: 8000 },
-    { id: "Fernet", nombre: 'Fernet', precio: 7000 },
-    { id: "Speed", nombre: 'Speed', precio: 1300 },
-    { id: "Coca-Cola", nombre: 'Coca-Cola', precio: 2000 },
+    new Producto(1, 'Cerveza', 'Quilmes', 2000),
+    new Producto(2, 'Vino', 'Norton', 1500),
+    new Producto(3, 'Vodka', 'Smirnoff', 8000),
+    new Producto(4, 'Fernet', 'Branca', 7000),
+    new Producto(5, 'Speed', 'Speed Unlimited', 1300),
+    new Producto(6, 'Coca-Cola', 'Coca-Cola', 2000),
 ];
 
 let carrito = [];
@@ -12,7 +28,7 @@ let carrito = [];
 function mostrarProducto() {
     console.log("Productos disponibles:");
     productos.forEach(producto => {
-        console.log(`${producto.nombre} - $${producto.precio}`);
+        console.log(producto.mostrarInfo());
     });
 }
 
@@ -23,14 +39,20 @@ function agregarAlCarrito() {
         let producto = productos.find(p => p.nombre.toLowerCase() === nombreProducto);
 
         if (producto) {
-            carrito.push(producto);
-            console.log(`${producto.nombre} ha sido agregado al carrito.`);
+            let cantidad = parseInt(prompt(`¿Cuántas unidades de ${producto.nombre} (${producto.marca}) desea agregar? (Déjelo en blanco para agregar 1)`), 10);
+            if (isNaN(cantidad) || cantidad <= 0) {
+                cantidad = 1;
+            }
+            for (let i = 0; i < cantidad; i++) {
+                carrito.push(producto);
+            }
+            console.log(`${cantidad} unidad(es) de ${producto.nombre} (${producto.marca}) ha(n) sido agregada(s) al carrito.`);
             productoEncontrado = true;
         } else {
             console.log("Producto no encontrado. Intente nuevamente.");
         }
     }
-} // <-- Aquí estaba el paréntesis de cierre que faltaba
+}
 
 function mostrarTotalCarrito() {
     let total = carrito.reduce((acc, producto) => acc + producto.precio, 0);
@@ -40,7 +62,6 @@ function mostrarTotalCarrito() {
 function realizarCompra() {
     mostrarProducto();
     let continuar = true;
-
     while (continuar) {
         agregarAlCarrito();
         let respuestaValida = false;

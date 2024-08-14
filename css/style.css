@@ -24,23 +24,51 @@ h1 {
     cursor: pointer;
 }
 
-#menu-toggle:checked + .listanav {
+
+/* Estilos del botón de hamburguesa */
+.menu-hamburguesa {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-left: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-hamburguesa span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: rgb(5, 5, 5);
+    border-radius: 5px;
+}
+
+.nav-inicio {
+    display: none;
+    margin: 10px;
+    background-color: darkgoldenrod;
+    border-radius: 5px;
+}
+
+.nav-inicio.active {
     display: block;
 }
 
 .listanav {
-    background-color: var(--dorado);
-    border-radius: 5px;
     list-style-type: none;
     padding: 0;
 }
 
-.listanav a {
+.linknav {
     color: white;
+    text-decoration: none;
     display: block;
     padding: 10px;
-    text-decoration: none;
 }
+
 
 h3 {
     background-color: var(--dorado);
