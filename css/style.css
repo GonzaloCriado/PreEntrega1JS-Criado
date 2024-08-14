@@ -1,50 +1,82 @@
-body{
+body {
     background-color: rgb(33, 33, 92);
     margin: 0;
 }
 
-h1{
-    background-color: darkgoldenrod;
+h1 {
+    background-color: var(--dorado);
     color: white;
     margin: 10px;
     padding: 10px;
-    justify-content: center;
     text-align: center;
     border-radius: 5px;
-}
-.nav-inicio{
-    margin: 10px;
-}
-.listanav{
-    background-color: darkgoldenrod;
-    border-radius: 5px;
-    list-style-type: none;
-}
-.linknav{
-    color: white;
 }
 
-h3{
-    background-color: darkgoldenrod;
+.nav-inicio {
+    margin: 10px;
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+#menu-toggle:checked + .listanav {
+    display: block;
+}
+
+.listanav {
+    background-color: var(--dorado);
+    border-radius: 5px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.listanav a {
+    color: white;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+h3 {
+    background-color: var(--dorado);
     margin: 10px;
     color: white;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
 }
-.listaproductos{
-    background-color: darkgoldenrod;
+
+.producto-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin: 10px;
-    border-radius: 5px;
 }
-.productos{
-    background-color: darkgoldenrod;
+
+.producto-card {
+    background-color: var(--dorado);
     color: white;
-    padding: 2px;
-    font-size: 22px;
-}
-p{
-    color: white;
-    background-color: black;
+    padding: 10px;
+    font-size: 18px;
+    width: 200px;
     text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-inicio {
+    opacity: 0.2;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+:root {
+    --dorado: #b89b5c;
 }
