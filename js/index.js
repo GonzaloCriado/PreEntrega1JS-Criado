@@ -1,4 +1,4 @@
-// Definición de la clase Producto
+
 class Producto {
     constructor(id, nombre, marca, precio) {
         this.id = id;
@@ -7,13 +7,12 @@ class Producto {
         this.precio = precio;
     }
 
-    // Método para mostrar la información del producto
+    
     mostrarInfo() {
         return `${this.nombre} (${this.marca}) - $${this.precio}`;
     }
 }
 
-// Creación de objetos de la clase Producto
 const productos = [
     new Producto(1, 'Cerveza', 'Quilmes', 2000),
     new Producto(2, 'Vino', 'Norton', 1500),
@@ -58,6 +57,9 @@ function mostrarTotalCarrito() {
     let total = carrito.reduce((acc, producto) => acc + producto.precio, 0);
     console.log(`Total del carrito: $${total}`);
 }
+
+
+
 
 function realizarCompra() {
     mostrarProducto();
