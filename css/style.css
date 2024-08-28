@@ -24,8 +24,7 @@ h1 {
     cursor: pointer;
 }
 
-
-/*  hamburguesa */
+/* hamburguesa */
 .menu-hamburguesa {
     cursor: pointer;
     width: 20px;
@@ -49,7 +48,7 @@ h1 {
 .nav-inicio {
     display: none;
     margin: 10px;
-    background-color: darkgoldenrod;
+    background-color: #b89b5c;
     border-radius: 5px;
 }
 
@@ -69,7 +68,6 @@ h1 {
     padding: 10px;
 }
 
-
 h3 {
     background-color: var(--dorado);
     margin: 10px;
@@ -86,6 +84,13 @@ h3 {
     margin: 10px;
 }
 
+.footer-inicio {
+    opacity: 0.2;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
 .producto-card {
     background-color: var(--dorado);
     color: white;
@@ -95,16 +100,64 @@ h3 {
     text-align: center;
     border-radius: 5px;
     margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
 }
 
-.footer-inicio {
-    opacity: 0.2;
-    background-color: black;
+.producto-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.producto-card .cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.producto-card .cantidad button {
+    background-color: var(--dorado);
+    border: none;
     color: white;
-    text-align: center;
-    padding: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.producto-card .cantidad button:hover {
+    background-color: darkgoldenrod;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    color: white;
+}
+
+.carrito-item button {
+    background-color: var(--dorado);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrito-item button:hover {
+    background-color:#b89b5c;
+}
+.total-precio {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #b89b5c;
+}
 :root {
     --dorado: #b89b5c;
 }

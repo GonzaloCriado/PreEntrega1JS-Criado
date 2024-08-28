@@ -1,88 +1,90 @@
-
 class Producto {
-    constructor(id, nombre, marca, precio) {
+    constructor(id, nombre, marca, precio, imagen) {
         this.id = id;
         this.nombre = nombre;
         this.marca = marca;
         this.precio = precio;
+        this.imagen = imagen;
     }
 
-    
     mostrarInfo() {
         return `${this.nombre} (${this.marca}) - $${this.precio}`;
     }
 }
 
 const productos = [
-    new Producto(1, 'Cerveza', 'Quilmes', 2000),
-    new Producto(2, 'Vino', 'Norton', 1500),
-    new Producto(3, 'Vodka', 'Smirnoff', 8000),
-    new Producto(4, 'Fernet', 'Branca', 7000),
-    new Producto(5, 'Speed', 'Speed Unlimited', 1300),
-    new Producto(6, 'Coca-Cola', 'Coca-Cola', 2000),
+    new Producto(1, 'Cerveza', 'Quilmes', 2000, 'assets/images/.bebidas/quilmes.jpg'),
+    new Producto(2, 'Vino', 'Norton', 1500, 'assets/images/.bebidas/viñasdebalbo.jpg'),
+    new Producto(3, 'Vodka', 'Smirnoff', 8000, 'assets/images/.bebidas/skysavorizado.jpg'),
+    new Producto(4, 'Fernet', 'Branca', 7000, 'assets/images/.bebidas/fernetbranca.jpg'),
+    new Producto(5, 'Speed', 'Speed Unlimited', 1300, 'assets/images/.bebidas/speed XL.jpg'),
+    new Producto(6, 'Coca-Cola', 'Coca-Cola', 2000, 'assets/images/.bebidas/cocacola2,25L.jpg'),
 ];
 
 let carrito = [];
 
-function mostrarProducto() {
-    console.log("Productos disponibles:");
+document.addEventListener('DOMContentLoaded', () => {
+    cargarProductos();
+    actualizarCarrito();
+});
+
+function cargarProductos() {
+    const productoGrid = document.querySelector('.producto-grid');
+    productoGrid.innerHTML = '';
+
     productos.forEach(producto => {
-        console.log(producto.mostrarInfo());
+        const productoDiv = document.createElement('div');
+        productoDiv.classList.add('producto-card');
+        productoDiv.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}">
+            <p>${producto.nombre}: $${producto.precio}</p>
+            <button onclick="agregarAlCarrito(${producto.id})">Agregar</button>
+        `;
+        productoGrid.appendChild(productoDiv);
     });
 }
 
-function agregarAlCarrito() {
-    let productoEncontrado = false;
-    while (!productoEncontrado) {
-        let nombreProducto = prompt("Ingrese el nombre del producto que desea agregar al carrito:").toLowerCase();
-        let producto = productos.find(p => p.nombre.toLowerCase() === nombreProducto);
-
-        if (producto) {
-            let cantidad = parseInt(prompt(`¿Cuántas unidades de ${producto.nombre} (${producto.marca}) desea agregar? (Déjelo en blanco para agregar 1)`), 10);
-            if (isNaN(cantidad) || cantidad <= 0) {
-                cantidad = 1;
-            }
-            for (let i = 0; i < cantidad; i++) {
-                carrito.push(producto);
-            }
-            console.log(`${cantidad} unidad(es) de ${producto.nombre} (${producto.marca}) ha(n) sido agregada(s) al carrito.`);
-            productoEncontrado = true;
-        } else {
-            console.log("Producto no encontrado. Intente nuevamente.");
-        }
+function agregarAlCarrito(productoId) {
+    const producto = productos.find(p => p.id === productoId);
+    if (producto) {
+        carrito.push(producto);
+        actualizarCarrito();
     }
 }
 
-function mostrarTotalCarrito() {
-    let total = carrito.reduce((acc, producto) => acc + producto.precio, 0);
-    console.log(`Total del carrito: $${total}`);
-}
-
-
-
-
-function realizarCompra() {
-    mostrarProducto();
-    let continuar = true;
-    while (continuar) {
-        agregarAlCarrito();
-        let respuestaValida = false;
-
-        while (!respuestaValida) {
-            let otraCompra = prompt("¿Desea agregar otro producto al carrito? (si/no)").toLowerCase();
-            if (otraCompra === 'si') {
-                continuar = true;
-                respuestaValida = true;
-            } else if (otraCompra === 'no') {
-                continuar = false;
-                respuestaValida = true;
-            } else {
-                console.log("Respuesta no válida, responda 'si' o 'no'.");
-            }
-        }
+function aumentarCantidadEnCarrito(productoId) {
+    const producto = productos.find(p => p.id === productoId);
+    if (producto) {
+        carrito.push(producto);
+        actualizarCarrito();
     }
-
-    mostrarTotalCarrito();
 }
 
-realizarCompra();
+function quitarDelCarrito(productoId) {
+    const index = carrito.findIndex(producto => producto.id === productoId);
+    if (index !== -1) {
+        carrito.splice(index, 1);
+        actualizarCarrito();
+    }
+}
+
+function actualizarCarrito() {
+    const listaCarrito = document.getElementById('listaCarrito');
+    const totalPrecio = document.getElementById('totalPrecio');
+
+    listaCarrito.innerHTML = '';
+
+    carrito.forEach((producto, index) => {
+        const li = document.createElement('li');
+        li.classList.add('carrito-item');
+        li.innerHTML = `${producto.nombre} (${producto.marca}) - $${producto.precio}
+            <button onclick="quitarDelCarrito(${producto.id})">-</button>
+            <button onclick="aumentarCantidadEnCarrito(${producto.id})">+</button>`;
+        listaCarrito.appendChild(li);
+    });
+
+    const total = carrito.reduce((acc, producto) => acc + producto.precio, 0);
+    totalPrecio.textContent = `Total: $${total}`;
+}
+
+
