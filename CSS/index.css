@@ -81,7 +81,8 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 10px;
+    margin: 20px;
+    height: 100px;
 }
 
 .footer-inicio {
@@ -160,4 +161,51 @@ h3 {
 }
 :root {
     --dorado: #b89b5c;
+}
+.categoria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    gap: 10px;
+    margin: 20px;
+}
+
+.producto-card, .categoria-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.producto-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.producto-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.producto-card button {
+    padding: 8px 12px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.detalle-producto {
+    display: none;
+    margin-top: 20px;
+}
+
+.detalle-producto.active {
+    display: block;
+}
+
+.categoria-card:hover {
+    transform: scale(1.05);
 }

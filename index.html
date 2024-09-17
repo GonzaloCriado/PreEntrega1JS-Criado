@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Previon - Inicio</title>
+    <title>Previon - Tienda de Bebidas</title>
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <header>
-        <h1>Previon - tienda de bebidas</h1>
+        <h1>Previon - Tienda de Bebidas</h1>
         <div class="menu-hamburguesa" id="menuToggle">
             <span></span>
             <span></span>
@@ -23,14 +23,18 @@
             <li><a class="linknav" href="/HTML/ubicacion.html">Ubicación</a></li>
         </ul>
     </nav>
+    
     <main>
-        <h3>Productos disponibles</h3>
-        <div class="producto-grid"></div>
+        <h3>Productos Disponibles</h3>
+        <div id="categoriaGrid" class="producto-grid"></div>
+        
+        <div id="detalleProducto" class="detalle-producto" style="display: none;"></div>
 
         <h3>Carrito</h3>
         <ul id="listaCarrito"></ul>
         <p id="totalPrecio" class="total-precio">Total: $0</p>
     </main>
+
     <footer class="footer-inicio">
         <p>Derechos de autor - Gonzalo Criado</p>
         <p>Coderhouse 2024 / Comisión-59950</p>
@@ -40,3 +44,4 @@
     <script src="/js/menuhamburguesa.js"></script>
 </body>
 </html>
+
