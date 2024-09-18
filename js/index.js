@@ -13,7 +13,6 @@ class Producto {
     }
 }
 
-// Simulación de productos disponibles
 const productos = [
     new Producto(1, "Brio", "Brio", 1500, "Bebidas sin alcohol", "/assets/images/.bebidas/.bebidassinalcohol/brio.jpg"),
     new Producto(2, "Coca-cola 500ml", "coca-cola", 1200, "Bebidas sin alcohol", "/assets/images/.bebidas/.bebidassinalcohol/cocachica.jpg"),
