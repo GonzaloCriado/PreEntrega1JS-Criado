@@ -28,44 +28,44 @@ const productos = [
     new Producto(11, "Andes", "Andes", 2500, "Cervezas", "/assets/images/.bebidas/.cervezas/andesbotella.jpg"),
     new Producto(12, "Andes rubia 500ml", "Andes", 1200, "Cervezas", "/assets/images/.bebidas/.cervezas/andesrubia.jpg"),
     new Producto(13, "Brahma dorada", "Brahma", 1200, "Cervezas", "/assets/images/.bebidas/.cervezas/brahmadorada.jpg"),
-    new Producto(14, "Budweiser", "budweiser", 1200, "Cervezas", "/assets/images/.bebidas/.cervezas/budweiser.jpg"),
+    new Producto(14, "Budweiser", "Budweiser", 1200, "Cervezas", "/assets/images/.bebidas/.cervezas/budweiser.jpg"),
     new Producto(15, "Corona 500ml", "Corona", 1500, "Cervezas", "/assets/images/.bebidas/.cervezas/corona.jpg"),
     new Producto(16, "Iguana", "Iguana", 2000, "Cervezas", "/assets/images/.bebidas/.cervezas/iguanabotella.jpg"),
     new Producto(17, "Imperial", "Imperial", 2500, "Cervezas", "/assets/images/.bebidas/.cervezas/imperialbotella.jpg"),
     new Producto(18, "Quilmes", "Quilmes", 2200, "Cervezas", "/assets/images/.bebidas/.cervezas/quilmes.jpg"),
-    new Producto(19, "Stella Artois", "stellaartois", 2000, "Cervezas", "/assets/images/.bebidas/.cervezas/stellaartois.jpg"),
-    new Producto(20, "Corona", "corona", 3000, "Cervezas", "/assets/images/.bebidas/.cervezas/coronabotella.jpg"),
+    new Producto(19, "Stella Artois", "Stella Artois", 2000, "Cervezas", "/assets/images/.bebidas/.cervezas/stellaartois.jpg"),
+    new Producto(20, "Corona", "Corona", 3000, "Cervezas", "/assets/images/.bebidas/.cervezas/coronabotella.jpg"),
     new Producto(21, "Alaris", "Alaris", 4500, "Vinos Tintos", "/assets/images/.bebidas/.vinostintos/alaris.jpg"),
-    new Producto(22, "Vino Toro", "vino toro", 800, "Vinos Tintos", "/assets/images/.bebidas/.vinostintos/vinotoro.jpg"),
+    new Producto(22, "Vino Toro", "Vino Toro", 800, "Vinos Tintos", "/assets/images/.bebidas/.vinostintos/vinotoro.jpg"),
     new Producto(23, "Cordero con piel de lobo", "Malbec", 5000, "Vinos Tintos", "/assets/images/.bebidas/.vinostintos/corderoconpieldelobo.jpg"),
     new Producto(24, "El gordo motoneta", "Malbec", 3000, "Vinos Tintos", "/assets/images/.bebidas/.vinostintos/elgordomotoneta.jpg"),
-    new Producto(25, "Otro loco mas", "Malbec", 3000, "Vinos Tintos", "/assets/images/.bebidas/.vinostintos/otrolocomas.jpg"),
-    new Producto(26, "Viñas de balbo", "Malbec", 2900, "Vinos Tintos", "/assets/images/.bebidas/.vinostintos/viñasdebalbo.jpg"),
+    new Producto(25, "Otro loco más", "Malbec", 3000, "Vinos Tintos", "/assets/images/.bebidas/.vinostintos/otrolocomas.jpg"),
+    new Producto(26, "Viñas de Balbo", "Malbec", 2900, "Vinos Tintos", "/assets/images/.bebidas/.vinostintos/viñasdebalbo.jpg"),
     new Producto(27, "Baileys", "Jameson", 8000, "Whiskies", "/assets/images/.bebidas/.whiskys/baileys.jpg"),
     new Producto(28, "Ballantines", "Jameson", 9000, "Whiskies", "/assets/images/.bebidas/.whiskys/ballantines.jpg"),
-    new Producto(29, "Black label", "Jameson", 12000, "Whiskies", "/assets/images/.bebidas/.whiskys/blacklabel.jpg"),
-    new Producto(30, "Blenders pride", "Jameson", 10000, "Whiskies", "/assets/images/.bebidas/.whiskys/blenderspride.jpg"),
-    new Producto(31, "Chivas regal", "Jameson", 10000, "Whiskies", "/assets/images/.bebidas/.whiskys/chivasregal.jpg"),
+    new Producto(29, "Black Label", "Jameson", 12000, "Whiskies", "/assets/images/.bebidas/.whiskys/blacklabel.jpg"),
+    new Producto(30, "Blenders Pride", "Jameson", 10000, "Whiskies", "/assets/images/.bebidas/.whiskys/blenderspride.jpg"),
+    new Producto(31, "Chivas Regal", "Jameson", 10000, "Whiskies", "/assets/images/.bebidas/.whiskys/chivasregal.jpg"),
     new Producto(32, "Jameson", "Jameson", 11000, "Whiskies", "/assets/images/.bebidas/.whiskys/jameson.jpg"),
-    new Producto(33, "Red label", "Jameson", 12000, "Whiskies", "/assets/images/.bebidas/.whiskys/redlabel.jpg"),
-    new Producto(34, "White horse", "Jameson", 10000, "Whiskies", "/assets/images/.bebidas/.whiskys/whitehorse.jpg"),
-    new Producto(35, "Absolut", "vodka", 13000, "Vodka", "/assets/images/.bebidas/vodkas/absolut.jpg"),
-    new Producto(36, "Dr.lemon", "vodka", 2500, "Vodka", "assets/images/.bebidas/vodkas/dr.lemon.jpg"),
-    new Producto(37, "Frizze", "vodka", 2500, "Vodka", "assets/images/.bebidas/vodkas/frizze.jpg"),
-    new Producto(38, "Sernova", "vodka", 6000, "Vodka", "assets/images/.bebidas/vodkas/sernova.jpg"),
-    new Producto(39, "Sky Frutos rojos", "vodka", 10000, "Vodka", "assets/images/.bebidas/vodkas/skyfrutosrojos.jpg"),
-    new Producto(40, "Sky mango", "vodka", 10000, "Vodka", "assets/images/.bebidas/vodkas/skysavorizado.jpg"),
-    new Producto(41, "Smirnoff", "vodka", 8000, "Vodka", "assets/images/.bebidas/vodkas/smirnoff.jpg"),
-    new Producto(42, "Speed XL", "speed", 1500, "Energizantes", "/assets/images/.bebidas/.energizantes/speed XL.jpg"),
-    new Producto(43, "Red bull", "Red Bull", 1200, "Energizantes", "/assets/images/.bebidas/.energizantes/redbull.jpg"),
-    new Producto(44, "Monster", "Monster", 1300 , "Energizantes", "/assets/images/.bebidas/.energizantes/monster.jpg"),
-    new Producto(45, "Fernet branca", "Fernet", 10000, "Aperitivos", "/assets/images/.bebidas/.aperitivos/fernetbranca.jpg"),
-    new Producto(46, "Carpano rosso", "Carpano", 8000, "Aperitivos", "/assets/images/.bebidas/.aperitivos/carpanorosso.jpg"),
-    new Producto(47, "Fernet branca menta", "Fernet", 9000, "Aperitivos", "/assets/images/.bebidas/.aperitivos/brancamenta.jpg"),
+    new Producto(33, "Red Label", "Jameson", 12000, "Whiskies", "/assets/images/.bebidas/.whiskys/redlabel.jpg"),
+    new Producto(34, "White Horse", "Jameson", 10000, "Whiskies", "/assets/images/.bebidas/.whiskys/whitehorse.jpg"),
+    new Producto(35, "Absolut", "Absolut", 13000, "Vodka", "/assets/images/.bebidas/vodkas/absolut.jpg"),
+    new Producto(36, "Dr. Lemon", "Dr. Lemon", 2500, "Vodka", "/assets/images/.bebidas/vodkas/dr.lemon.jpg"),
+    new Producto(37, "Frizze", "Frizze", 2500, "Vodka", "/assets/images/.bebidas/vodkas/frizze.jpg"),
+    new Producto(38, "Sernova", "Sernova", 6000, "Vodka", "/assets/images/.bebidas/vodkas/sernova.jpg"),
+    new Producto(39, "Sky Frutos Rojos", "Sky", 10000, "Vodka", "/assets/images/.bebidas/vodkas/skyfrutosrojos.jpg"),
+    new Producto(40, "Sky Mango", "Sky", 10000, "Vodka", "/assets/images/.bebidas/vodkas/skysavorizado.jpg"),
+    new Producto(41, "Smirnoff", "Smirnoff", 8000, "Vodka", "/assets/images/.bebidas/vodkas/smirnoff.jpg"),
+    new Producto(42, "Speed XL", "Speed", 1500, "Energizantes", "/assets/images/.bebidas/.energizantes/speed XL.jpg"),
+    new Producto(43, "Red Bull", "Red Bull", 1200, "Energizantes", "/assets/images/.bebidas/.energizantes/redbull.jpg"),
+    new Producto(44, "Monster", "Monster", 1300, "Energizantes", "/assets/images/.bebidas/.energizantes/monster.jpg"),
+    new Producto(45, "Fernet Branca", "Fernet", 10000, "Aperitivos", "/assets/images/.bebidas/.aperitivos/fernetbranca.jpg"),
+    new Producto(46, "Carpano Rosso", "Carpano", 8000, "Aperitivos", "/assets/images/.bebidas/.aperitivos/carpanorosso.jpg"),
+    new Producto(47, "Fernet Branca Menta", "Fernet", 9000, "Aperitivos", "/assets/images/.bebidas/.aperitivos/brancamenta.jpg"),
     new Producto(48, "Hielo", "Kilos", 150, "Hielo", "/assets/images/.bebidas/.hielo/bolsadehielo.jpg")
 ];
 
-const categorias = [...new Set(productos.map(p => p.categoria))]; // Categorías únicas
+const categorias = [...new Set(productos.map(p => p.categoria))];
 let carrito = [];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -141,7 +141,26 @@ function eliminarDelCarrito(index) {
 }
 
 function volverACategorias() {
-    const productoGrid = document.getElementById('categoriaGrid');
-    productoGrid.innerHTML = '';
     cargarCategorias();
+}
+
+function realizarCompra() {
+    if (carrito.length === 0) {
+        alert("Tu carrito está vacío");
+        return;
+    }
+
+    let mensaje = "Hola, quiero realizar el siguiente pedido:\n\n";
+    carrito.forEach((producto, index) => {
+        mensaje += `${index + 1}. ${producto.nombre} - $${producto.precio}\n`;
+    });
+
+    const total = carrito.reduce((acc, producto) => acc + producto.precio, 0);
+    mensaje += `\nTotal: $${total}`;
+
+    const mensajeCodificado = encodeURIComponent(mensaje);
+    const numeroWhatsApp = "3518031033";
+    const url = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+
+    window.open(url, "_blank");
 }

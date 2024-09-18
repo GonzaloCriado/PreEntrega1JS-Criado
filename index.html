@@ -24,9 +24,6 @@
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#infoModal">Información</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/HTML/hacer_pedido.html">Hacer pedido</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#ubicacionModal">Ubicación</a>
                     </li>
                 </ul>
@@ -43,6 +40,9 @@
         <h3>Carrito</h3>
         <ul id="listaCarrito"></ul>
         <p id="totalPrecio" class="total-precio">Total: $0</p>
+
+        <!-- Botón para realizar la compra -->
+        <button id="comprarBtn" class="btn btn-primary" onclick="realizarCompra()">Comprar</button>
     </main>
 
     <footer class="footer-inicio">
@@ -93,6 +93,7 @@
             </div>
         </div>
     </div>
+    
 
     <script src="/bootstrap/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/index.js"></script>

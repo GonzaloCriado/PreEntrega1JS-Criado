@@ -135,17 +135,31 @@ h3 {
 }
 
 .navbar {
-    background-color: rgb(33, 33, 92); /* Color de fondo de la navbar */
+    background-color: rgb(33, 33, 92); 
 }
 
 .navbar-nav .nav-link {
-    color: white; /* Color del texto de los enlaces */
+    color: white; 
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--dorado); /* Color del enlace activo */
+    color: var(--dorado); 
 }
 
 .navbar-toggler-icon {
-    background-color: var(--dorado); /* Color del icono del menú de hamburguesa */
+    background-color: var(--dorado); 
+}
+#comprarBtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+#comprarBtn:hover {
+    background-color: #333;
 }
